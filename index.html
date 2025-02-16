@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding DApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crowdfunding DApp</h1>
+        
+        <!-- Create Campaign Section -->
+        <section>
+            <h2>Create Campaign</h2>
+            <input type="text" id="title" placeholder="Campaign Title">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="goal" placeholder="Goal (in Wei)">
+            <input type="number" id="duration" placeholder="Duration (seconds)">
+            <button onclick="createCampaign()">Create Campaign</button>
+        </section>
+
+        <!-- Donate Section -->
+        <section>
+            <h2>Donate to Campaign</h2>
+            <input type="number" id="campaignId" placeholder="Campaign ID">
+            <input type="number" id="amount" placeholder="Amount (in Wei)">
+            <button onclick="donate()">Donate</button>
+        </section>
+
+        <!-- Withdraw Funds Section -->
+        <section>
+            <h2>Withdraw Funds</h2>
+            <input type="number" id="withdrawCampaignId" placeholder="Campaign ID">
+            <button onclick="withdrawFunds()">Withdraw</button>
+        </section>
+
+        <!-- Refund Section -->
+        <section>
+            <h2>Get Refund</h2>
+            <input type="number" id="refundCampaignId" placeholder="Campaign ID">
+            <button onclick="getRefund()">Get Refund</button>
+        </section>
+
+        <!-- Check Status Section -->
+        <section>
+            <h2>Check Campaign Status</h2>
+            <input type="number" id="statusCampaignId" placeholder="Campaign ID">
+            <button onclick="getCampaignStatus()">Check Status</button>
+            <p id="campaignStatus"></p>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
